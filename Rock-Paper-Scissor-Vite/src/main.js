@@ -1,19 +1,21 @@
 import './style.css';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+document.addEventListener('DOMContentLoaded', () => {
+  const startscreenContainer = document.getElementById('startscreen-container');
+
+  // Lädt die startscreen.html dynamisch
+  fetch('./startscreen.html')
+    .then((response) => response.text())
+    .then((html) => {
+      startscreenContainer.innerHTML = html;
+
+      // Logik zum Ausblenden des Startbildschirms nach Klick auf Start Game
+      const startButton = document.getElementById('startbutton');
+      startButton.addEventListener('click', () => {
+        startscreenContainer.style.display = 'none';
+      });
+    })
+    .catch((error) => {
+      console.error('Fehler beim Laden des Startbildschirms:', error);
+    });
+});
