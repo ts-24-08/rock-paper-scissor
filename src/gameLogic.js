@@ -11,12 +11,8 @@ const outcomes = {
   scissors: { rock: "lose", paper: "win", scissors: "draw" },
 };
 
-function getResult(playerChoice, computerChoice) {
-  if (!outcomes[playerChoice] || !outcomes[computerChoice]) {
-    console.error("Ungültige Wahl:", playerChoice, computerChoice);
-    return;
-  }
+function getResults(playerChoice, computerChoice) {
   return outcomes[playerChoice][computerChoice];
 }
 
-export { getComputerChoice, getResult };
+export { getComputerChoice, getResults };
