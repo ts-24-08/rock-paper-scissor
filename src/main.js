@@ -1,5 +1,5 @@
-import "./style.css";
 import { getComputerChoice, getResults } from "./gameLogic";
+import "./style.css";
 
 const elements = {
   startScreen: document.getElementById("startscreen"),
