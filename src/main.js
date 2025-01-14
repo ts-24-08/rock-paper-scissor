@@ -5,15 +5,15 @@ const elements = {
   startScreen: document.getElementById("startscreen"),
   startButton: document.getElementById("startbutton"),
   scoreDisplay: document.getElementById("score"),
-  results: document.getElementById("results"),
-  result: document.getElementById("result"),
-  resultText: document.getElementById("resulttext"),
-  userChoiceDiv: document.getElementById("userchoice"),
-  computerChoiceDiv: document.getElementById("computerchoice"),
   playAgainButton: document.getElementById("playagain"),
-  gameContainer: document.getElementById("gamecontainer"),
+  resultText: document.getElementById("resulttext"),
+  results: document.getElementById("results"),
+  computerChoiceDiv: document.getElementById("computerchoice"),
+  result: document.getElementById("result"),
   ruleButton: document.getElementById("rulebutton"),
+  userChoiceDiv: document.getElementById("userchoice"),
   closeButton: document.getElementById("closebutton"),
+  gameContainer: document.getElementById("gamecontainer"),
 };
 
 let score = 0;
