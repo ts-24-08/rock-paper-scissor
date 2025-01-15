@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/thumb.svg" />
+    <script type="module" defer src="/src/main.js"></script>
+    <title>Rock Paper Scissors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="mx-auto grid bg-gradient-to-b from-blue-950 via-blue-800 to-blue-700 p-10 text-white"
+  >
+    <!-- Header-Bereich -->
+    <header
+      id="header"
+      class="container m-4 flex hidden w-1/2 justify-between rounded-2xl border p-4"
+    >
+      <h1 class="w-20 text-3xl">Rock Paper Scissors</h1>
+      <div class="grid h-28 w-28 rounded-xl bg-slate-50 text-center text-black">
+        <span class="font-sans text-xl font-extrabold">Score</span>
+        <span id="score" class="font-sans text-6xl font-extrabold">0</span>
+      </div>
+    </header>
+
+    <!-- Hauptbereich mit Buttons -->
+    <main id="main" class="grid hidden grid-flow-row grid-cols-3 grid-rows-2">
+      <button
+        data-choice="scissors"
+        class="relative left-10 row-start-2 h-32 w-32 rounded-full border-8 border-red-500 bg-red-300 hover:scale-105 hover:border-red-300"
+      >
+        <img src="./images/scissors.svg" alt="Scissors" />
+      </button>
+      <button
+        data-choice="rock"
+        class="relative col-start-2 h-32 w-32 rounded-full border-8 border-blue-500 bg-blue-300 hover:scale-105 hover:border-blue-300"
+      >
+        <img src="./images/rock.svg" alt="Rock" />
+      </button>
+      <button
+        data-choice="paper"
+        class="relative right-10 col-start-3 row-start-2 h-32 w-32 rounded-full border-8 border-yellow-700 bg-yellow-300 hover:scale-105 hover:border-yellow-300"
+      >
+        <img src="./images/paper.svg" alt="Paper" />
+      </button>
+    </main>
+
+    <!-- Regeln
+  <div id="rules" style="display: none;">
+    <h2 >Rules</h2>
+    <p>Rock Paper Scissors is a game that is played between two players...</p>
+    <img src="./images/close.svg" alt="Close" id="closebutton" />
+  </div> -->
+
+    <!-- Button mit Tooltip -->
+    <div id="rules" class="group relative inline-block hidden">
+      <!-- Button -->
+      <button
+        class="relative left-48 rounded-full border-white bg-transparent px-4 py-2 text-white hover:scale-105 hover:border-2 hover:border-white"
+      >
+        Rules
+      </button>
+
+      <!-- Tooltip -->
+      <div
+        class="text-md absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 whitespace-nowrap rounded-lg bg-transparent px-2 py-1 text-white group-hover:block"
+      >
+        <p class="font-sans">
+          Rock Paper Scissors is a game that is played between two players...
+        </p>
+      </div>
+    </div>
+
+    <!-- Startbildschirm style="display:none;"-->
+    <div id="startscreen" class="visible mt-20 flex-col text-center">
+      <h1 class="text-[144px] font-bold leading-[0.6]">Rock</h1>
+      <br />
+      <h2 class="text-[144px] font-bold leading-[0.6]">Paper</h2>
+      <br />
+      <h3 class="text-[144px] font-bold leading-[0.6]">Scissors</h3>
+      <button
+        id="startbutton"
+        class="mt-20 rounded-full border-white bg-transparent hover:scale-101 hover:border-2 hover:border-white hover:bg-opacity-15"
+      >
+        Start Game
+      </button>
+    </div>
+
+    <!-- Ergebnisanzeige -->
+    <div id="results" class="hidden text-4xl">
+
+    </div>
+  </body>
+</html>
