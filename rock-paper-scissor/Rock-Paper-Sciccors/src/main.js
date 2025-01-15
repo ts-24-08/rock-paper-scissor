@@ -15,17 +15,17 @@ const computerImg = document.querySelector("#computerimg");
 const playAgain = document.querySelector("#playagain");
 
 export const COLORS = {
-    rock: "eb9e10",     // yellow
-    paper: "4564f3",    // blue
-    scissors: "de3b5a", // red
+    rock: "eb9e10",     
+    paper: "4564f3",    
+    scissors: "de3b5a", 
   };
 
-// Hide Starting Screen
+
 startButton.addEventListener("click", () => {
   start.classList.add("hidden");
 });
 
-// User Choice Input
+
 const choiceButtons = document.querySelectorAll("button[data-choice]");
 choiceButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -38,7 +38,7 @@ choiceButtons.forEach((button) => {
     });
 });
 
-// UI Update (Results and Score)
+
 async function updateUI(outcome) {
     result.textContent = outcome.result;
     
@@ -63,23 +63,22 @@ async function updateUI(outcome) {
     resultsElement.classList.remove("hidden");
 };
 
-// Close Win Screen
+
 playAgain.addEventListener("click", () => {
     resultsElement.classList.add("hidden");
 });
 
-// Show Rules
+
 rulesButton.addEventListener("click", () => {
     rules.classList.toggle("hidden");
 });
 
-// Close Rules
+
 closeRulesButton.addEventListener("click", () => {
     rules.classList.add("hidden");
 });
 
 function colorsToRemove() {
-    // Object.keys(COLORS) gibt ein Array aller Schlüssel im COLORS Objekt zurück
-    // .map((key) => `border-[#${COLORS[key]}]`) erstellt eine neue CSS-Klasse für jeden Schlüssel
+
     return Object.keys(COLORS).map((key) => `border-[#${COLORS[key]}]`);
   }
