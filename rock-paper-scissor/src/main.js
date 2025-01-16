@@ -12,4 +12,5 @@ function startGame() {
     startScreen.classList.add("hidden");
 };
 
+// Event Listener for the start button "Start Game" 
 startButton.addEventListener("click", startGame);
