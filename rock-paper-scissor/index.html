@@ -8,19 +8,19 @@
   <link href="./src/style.css" rel="stylesheet"/>
   <title>Rock Paper Scissors</title>
 </head>
-<body class="bg-sky-950">
+<body class="bg-sky-950 container mx-auto">
   <!-- Header-Bereich -->
-  <header class="container text-center font-metalmania text-white mx-auto">
-    <h1 class="text-2xl">Rock Paper Scissors</h1>
-    <div class="border-solid border-2 border-white rounded-lg">
+  <header class="justify-items-center mt-20 mb-20 font-metalmania text-white">
+    <h1 class="text-6xl">Rock Paper Scissors</h1>
+    <div class="text-center border-solid border-2 border-white rounded-full size-16 py-2 px-4 font-semibold">
       <span>Score</span>
       <span id="score">0</span>
     </div>
   </header>
 
   <!-- Hauptbereich mit Buttons -->
-  <main class="container flex justify-center">
-    <button data-choice="paper" class="bg-white hover:bg-green-700 outline outline-offset-2 outline-green-700 rounded-full text-white py-2 px-4 size-16">
+  <main class="grid justify-items-stretch flex-col space-y-4">
+    <button data-choice="paper" class="bg-white justify-self-center hover:bg-green-700 outline outline-offset-2 outline-green-700 rounded-full text-white py-2 px-4 size-16">
       <img src="./images/paper.svg" alt="Paper" />
     </button>
     <button data-choice="scissors" class="bg-white rounded-full outline outline-offset-2 outline-pink-800 hover:bg-red-700 size-16 py-2 px-4">
@@ -32,11 +32,11 @@
   </main>
 
   <!-- Startbildschirm -->
-  <div id="startscreen" class="fixed inset-o bg-gray-900 flex items-center justify-center text-white font-metalmania">
+  <div id="startscreen" class="container text-center fixed inset-o bg-gray-900 flex flex-col items-center justify-center text-white font-metalmania text-8xl mx-auto">
     <h1>Rock</h1>
     <h2>Paper</h2>
     <h3>Scissors</h3>
-    <button id="startbutton" class="rounded bg">Start Game</button>
+    <button id="startbutton" class="rounded outline outline-offset py-2 px-4 text-sm mx-0">Start Game</button>
   </div>
 
   <!-- Regeln -->
